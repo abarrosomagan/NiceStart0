@@ -11,5 +11,10 @@
 
     <string name="app_name">NiceStart</string>
     <string name="title_main">NiceStart</string>
+    <string name="go_to_bab">Ir a MainBab</string>
+
+    <string name="title_main_bab">MainBab</string>
+    <string name="main_bab_ok">MAIN_BAB OK</string>
+    <string name="back">Volver</string>
 
 </resources>

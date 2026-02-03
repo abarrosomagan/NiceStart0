@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -13,13 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NiceStart">
         <activity
+            android:name=".MainBabActivity"
+            android:exported="true" />
+        <activity
             android:name=".SignupActivity"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
-
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -29,9 +31,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:exported="true"
-            />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

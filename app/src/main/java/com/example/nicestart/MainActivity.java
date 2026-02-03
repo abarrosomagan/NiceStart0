@@ -26,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         MaterialToolbar topAppBar = findViewById(R.id.topAppBar);
         setSupportActionBar(topAppBar);
 
+        topAppBar.setNavigationOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MainBabActivity.class);
+            startActivity(intent);
+        });
+
         SwipeRefreshLayout swipeRefresh = findViewById(R.id.swipeRefresh);
         WebView webView = findViewById(R.id.webView);
 

@@ -10,30 +10,26 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
+            android:id="@+id/topAppBarBab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:title="@string/title_main"
+            android:title="@string/title_main_bab"
             android:background="@color/nicestart_primary"
             android:titleTextColor="@color/nicestart_on_primary"
-            app:navigationIcon="@drawable/ic_bab"
-            app:navigationContentDescription="@string/go_to_bab"
             app:titleCentered="true"
+            app:navigationIcon="@drawable/arrow_back"
+            app:navigationContentDescription="@string/back"
             app:titleTextAppearance="@style/TextAppearance.Material3.TitleMedium" />
-
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipeRefresh"
+    <!-- Contenido provisional (luego lo cambiamos por lo que haga Bab) -->
+    <TextView
+        android:id="@+id/tvBab"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <WebView
-            android:id="@+id/webView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        android:gravity="center"
+        android:text="@string/main_bab_ok"
+        android:textSize="20sp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
