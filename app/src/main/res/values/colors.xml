@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Verde principal -->
+    <color name="nicestart_primary">#1B5E20</color>      <!-- Verde oscuro -->
+    <color name="nicestart_on_primary">#FFFFFF</color>
+
+    <!-- Verde secundario -->
+    <color name="nicestart_secondary">#66BB6A</color>     <!-- Verde claro -->
+    <color name="nicestart_on_secondary">#FFFFFF</color>
+
+    <!-- Fondos -->
+    <color name="nicestart_background">#FFFFFF</color>
+    <color name="nicestart_surface">#F5F5F5</color>
+
+    <!-- Texto -->
+    <color name="nicestart_text_primary">#1B1B1B</color>
+    <color name="nicestart_text_secondary">#4F4F4F</color>
+
+</resources>
