@@ -1,6 +1,8 @@
 package com.example.nicestart;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -8,7 +10,7 @@ import android.widget.Toast;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
+import androidx.appcompat.app.AlertDialog;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
@@ -82,15 +84,27 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_about) {
-            Toast.makeText(this, "Acerca de ", Toast.LENGTH_SHORT).show();
+            showAboutDialog();
             return true;
         }
 
         if (id == R.id.action_logout) {
-            Toast.makeText(this, "Cerrar sesion", Toast.LENGTH_SHORT).show();
+            logoutToLogin();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    private void showAboutDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle("NiceStart")
+                .setMessage("App de Desarrollo de Interfaces.")
+                .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
+                .show();
+    }
+    private void logoutToLogin() {
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 }
