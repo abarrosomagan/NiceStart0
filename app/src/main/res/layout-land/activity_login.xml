@@ -34,7 +34,7 @@
         android:id="@+id/tvTitleLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login_title"
+        android:text="@string/activity_login_title"
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@color/nicestart_on_primary"
@@ -71,7 +71,7 @@
                     android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_email"
+                    android:hint="@string/activity_login_hint_email"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,25 +85,22 @@
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_password"
+                    android:hint="@string/activity_login_hint_password"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/btn_login"
+                android:text="@string/activity_login_btn_login"
                 app:backgroundTint="@color/nicestart_primary"
-                android:textColor="@color/nicestart_on_primary"/>
+                style="@style/mybutton" />
 
             <TextView
                 android:id="@+id/tvGoSignup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/go_signup"
+                android:text="@string/activity_login_go_signup"
                 android:textColor="@color/nicestart_primary"
                 android:textStyle="bold"
                 android:gravity="center" />

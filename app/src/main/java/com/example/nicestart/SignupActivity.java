@@ -18,12 +18,11 @@ public class SignupActivity extends AppCompatActivity {
         MaterialButton btnCreateAccount = findViewById(R.id.btnCreateAccount);
         TextView tvGoLogin = findViewById(R.id.tvGoLogin);
 
-        // Crear cuenta
         btnCreateAccount.setOnClickListener(v -> {
             startActivity(new Intent(SignupActivity.this, MainActivity.class));
             finish();
         });
-        // Volver a Login
+
         tvGoLogin.setOnClickListener(v -> finish());
     }
 }

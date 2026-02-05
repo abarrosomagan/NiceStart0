@@ -72,7 +72,6 @@ public class MainBabActivity extends AppCompatActivity {
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Acción para Opción 1
                 Toast.makeText(MainBabActivity.this, "Settings clicked", Toast.LENGTH_SHORT).show();
                 bottomSheetDialog.dismiss();
             }
@@ -82,7 +81,6 @@ public class MainBabActivity extends AppCompatActivity {
         option2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Acción para Opción 2
                 Toast.makeText(MainBabActivity.this, "About clicked", Toast.LENGTH_SHORT).show();
                 bottomSheetDialog.dismiss();
             }
@@ -92,7 +90,6 @@ public class MainBabActivity extends AppCompatActivity {
         option3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Acción para Opción 3
                 Toast.makeText(MainBabActivity.this, "Logout clicked", Toast.LENGTH_SHORT).show();
                 bottomSheetDialog.dismiss();
             }

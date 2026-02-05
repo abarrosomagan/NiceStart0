@@ -3,9 +3,10 @@
 
     <item
         android:id="@+id/action_about"
-        android:title="Acerca de" />
+        android:title="@string/activity_main_menu_about" />
 
     <item
         android:id="@+id/action_logout"
-        android:title="Cerrar sesión" />
+        android:title="@string/activity_main_menu_logout" />
+
 </menu>

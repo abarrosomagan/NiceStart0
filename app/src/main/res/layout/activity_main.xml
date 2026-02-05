@@ -13,11 +13,11 @@
             android:id="@+id/topAppBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:title="@string/title_main"
+            android:title="@string/activity_main_title"
             android:background="@color/nicestart_primary"
             android:titleTextColor="@color/nicestart_on_primary"
             app:navigationIcon="@drawable/ic_bab"
-            app:navigationContentDescription="@string/go_to_bab"
+            app:navigationContentDescription="@string/activity_main_go_to_bab"
             app:titleCentered="true"
             app:titleTextAppearance="@style/TextAppearance.Material3.TitleMedium" />
 

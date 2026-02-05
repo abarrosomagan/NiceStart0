@@ -1,16 +1,16 @@
 package com.example.nicestart;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import androidx.appcompat.app.AlertDialog;
+import android.widget.Toast;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //Cargas el layout
+        // Cargas el layout
         setContentView(R.layout.activity_main);
 
         MaterialToolbar topAppBar = findViewById(R.id.topAppBar);
@@ -34,11 +34,10 @@ public class MainActivity extends AppCompatActivity {
         SwipeRefreshLayout swipeRefresh = findViewById(R.id.swipeRefresh);
         WebView webView = findViewById(R.id.webView);
 
-//Settings necesarios para webs modernas
+        // Settings necesarios para webs modernas
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);   // CLAVE
         webView.getSettings().setLoadsImagesAutomatically(true);
-
 
         webView.setWebViewClient(new WebViewClient() {
             @Override
@@ -46,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 super.onPageFinished(view, url);
                 swipeRefresh.setRefreshing(false);
             }
+
             @Override
             public void onReceivedError(
                     WebView view,
@@ -55,16 +55,18 @@ public class MainActivity extends AppCompatActivity {
             ) {
                 super.onReceivedError(view, errorCode, description, failingUrl);
                 swipeRefresh.setRefreshing(false);
-                Toast.makeText(MainActivity.this,
-                        "Error cargando la página",
-                        Toast.LENGTH_SHORT).show();
+                Toast.makeText(
+                        MainActivity.this,
+                        getString(R.string.activity_main_web_error),
+                        Toast.LENGTH_SHORT
+                ).show();
             }
         });
 
-// Carga web iniciamentee
+        // Carga web inicial
         webView.loadUrl("https://m3.material.io/");
 
-// Swipe de refresco
+        // Swipe de refresco
         swipeRefresh.setOnRefreshListener(() -> {
             String currentUrl = webView.getUrl();
             if (currentUrl == null || currentUrl.isEmpty()) {
@@ -73,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
                 webView.reload();
             }
         });
-
     }
 
     // Inflar el menú
@@ -100,13 +101,18 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
     private void showAboutDialog() {
         new AlertDialog.Builder(this)
-                .setTitle("NiceStart")
-                .setMessage("App de Desarrollo de Interfaces.")
-                .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
+                .setTitle(getString(R.string.activity_main_dialog_about_title))
+                .setMessage(getString(R.string.activity_main_dialog_about_message))
+                .setPositiveButton(
+                        getString(R.string.activity_main_dialog_about_ok),
+                        (dialog, which) -> dialog.dismiss()
+                )
                 .show();
     }
+
     private void logoutToLogin() {
         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

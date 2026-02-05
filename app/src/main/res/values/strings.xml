@@ -1,21 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="login_title">NiceStart</string>
-    <string name="hint_email">Email</string>
-    <string name="hint_password">Password</string>
-    <string name="btn_login">Login</string>
-    <string name="go_signup">¿No tienes cuenta? Regístrate</string>
 
-    <string name="hint_name">Nombre</string>
-    <string name="btn_create_account">Crear cuenta</string>
-    <string name="go_login">¿Ya tienes cuenta? Inicia sesión</string>
-
+    <!-- GLOBAL -->
     <string name="app_name">NiceStart</string>
-    <string name="title_main">NiceStart</string>
-    <string name="go_to_bab">Ir a MainBab</string>
 
-    <string name="title_main_bab">MainBab</string>
-    <string name="main_bab_ok">MAIN_BAB OK</string>
-    <string name="back">Volver</string>
+    <!-- ACTIVITY: SPLASH -->
+    <string name="activity_splash_title">NiceStart</string>
+
+    <!-- ACTIVITY: LOGIN -->
+    <string name="activity_login_title">NiceStart</string>
+    <string name="activity_login_hint_email">Correo electrónico</string>
+    <string name="activity_login_hint_password">Contraseña</string>
+    <string name="activity_login_btn_login">Iniciar sesión</string>
+    <string name="activity_login_go_signup">¿No tienes cuenta? Regístrate</string>
+
+    <!-- ACTIVITY: SIGNUP -->
+    <string name="activity_signup_title">NiceStart</string>
+    <string name="activity_signup_hint_name">Nombre</string>
+    <string name="activity_signup_hint_email">Correo electrónico</string>
+    <string name="activity_signup_hint_password">Contraseña</string>
+    <string name="activity_signup_btn_create_account">Crear cuenta</string>
+    <string name="activity_signup_go_login">¿Ya tienes cuenta? Inicia sesión</string>
+
+    <!-- ACTIVITY: MAIN -->
+    <string name="activity_main_web_error">Error cargando la página</string>
+    <string name="activity_main_title">NiceStart</string>
+    <string name="activity_main_go_to_bab">Ir a MainBab</string>
+
+        <!-- Menú AppBar -->
+    <string name="activity_main_menu_about">Acerca de</string>
+    <string name="activity_main_menu_logout">Cerrar sesión</string>
+
+        <!-- Diálogo About -->
+    <string name="activity_main_dialog_about_title">NiceStart</string>
+    <string name="activity_main_dialog_about_message">Aplicación de Desarrollo de Interfaces.</string>
+    <string name="activity_main_dialog_about_ok">Aceptar</string>
+
+    <!-- ACTIVITY: MAINBAB -->
+    <string name="activity_mainbab_menu_components">Componentes</string>
+    <string name="activity_mainbab_menu_profile">Perfil</string>
+
+        <!-- BottomSheet -->
+    <string name="activity_mainbab_bs_settings">Ajustes</string>
+    <string name="activity_mainbab_bs_about">Acerca de</string>
+    <string name="activity_mainbab_bs_logout">Cerrar sesión</string>
+
+    <!-- Texto largo (scroll) -->
     <string name="appbar_view">El día amaneció con una pereza casi humana.
 Las nubes se estiraban como si hubieran dormido mal.
 En alguna parte sonó un despertador que nadie atendió.
@@ -67,4 +97,5 @@ El día se rindió sin drama.
 La oscuridad hizo su trabajo.
 Y el mundo, por fin, descansó.
 </string>
+
 </resources>
