@@ -1,35 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainBabActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBarBab"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:title="@string/title_main_bab"
-            android:background="@color/nicestart_primary"
-            android:titleTextColor="@color/nicestart_on_primary"
-            app:titleCentered="true"
-            app:navigationIcon="@drawable/arrow_back"
-            app:navigationContentDescription="@string/back"
-            app:titleTextAppearance="@style/TextAppearance.Material3.TitleMedium" />
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <!-- Contenido provisional (luego lo cambiamos por lo que haga Bab) -->
-    <TextView
-        android:id="@+id/tvBab"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/main_bab_ok"
-        android:textSize="20sp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:padding="16dp"
+            android:paddingBottom="120dp">
+
+            <TextView
+                android:id="@+id/tvBabContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/appbar_view"
+                android:textColor="@color/nicestart_on_secondary"
+                android:textSize="20sp" />
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:fabAlignmentMode="end"
+            app:menu="@menu/menu_bottom_bab"
+            app:navigationIcon="@drawable/ic_menu" />
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/fabBab"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="@color/nicestart_primary"-->
+<!--            android:contentDescription="@string/app_name"-->
+<!--            app:fabAlignmentMode="end"-->
+<!--            android:src="@drawable/ic_add"-->
+<!--            app:fabSize="normal"-->
+<!--            app:layout_anchor="@id/bottomAppBar" />-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/nicestart_secondary"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_add"
+            android:layout_marginEnd="16dp"
+            app:layout_anchor="@id/bottomAppBar"
+            app:layout_anchorGravity="top|end"
+            style="@style/FabRound"/>
+
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
