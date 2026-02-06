@@ -134,7 +134,7 @@ Pantalla de inicio de sesión en orientación vertical. Permite al usuario intro
 
 Pantalla de registro de usuario. Permite crear una nueva cuenta introduciendo nombre, correo electrónico y contraseña.
 
-![SignupActivity](screenshots/Signup.png)
+![SignupActivity](screenshots/Register.png)
 
 ---
 
@@ -149,7 +149,7 @@ Pantalla principal de la aplicación. Incluye una AppBar superior con menú y un
 
 Pantalla que muestra el uso de **BottomAppBar** con menú inferior y **FloatingActionButton**, además de un contenido desplazable y un *BottomSheetDialog*.
 
-![MainBabActivity](screenshots/Mainbab.png)
+![MainBabActivity](screenshots/MainBab.png)
 
 ---
 
