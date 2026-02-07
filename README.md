@@ -119,7 +119,7 @@ A continuación se muestran las capturas de pantalla de cada una de las *Activit
 
 Pantalla inicial que se muestra al abrir la aplicación. Presenta el logotipo y el nombre de la app durante unos segundos antes de redirigir automáticamente al login.
 
-*![SplashActivity](screenshots/splash.png)*
+*![SplashActivity](screenshots/Splash.png)*
 
 ---
 
@@ -127,14 +127,14 @@ Pantalla inicial que se muestra al abrir la aplicación. Presenta el logotipo y 
 
 Pantalla de inicio de sesión en orientación vertical. Permite al usuario introducir su correo y contraseña para acceder a la aplicación o navegar a la pantalla de registro.
 
-![LoginActivity](screenshots/login.png)
+![LoginActivity](screenshots/Login.png)
 ---
 
 ### SignupActivity
 
 Pantalla de registro de usuario. Permite crear una nueva cuenta introduciendo nombre, correo electrónico y contraseña.
 
-![SignupActivity](screenshots/signup.png)
+![SignupActivity](screenshots/Register.png)
 
 ---
 
@@ -142,14 +142,14 @@ Pantalla de registro de usuario. Permite crear una nueva cuenta introduciendo no
 
 Pantalla principal de la aplicación. Incluye una AppBar superior con menú y un WebView con soporte para recarga mediante *SwipeRefreshLayout*.
 
-![MainActivity](screenshots/main.png)
+![MainActivity](screenshots/Main.png)
 
 ---
 ### MainBabActivity
 
 Pantalla que muestra el uso de **BottomAppBar** con menú inferior y **FloatingActionButton**, además de un contenido desplazable y un *BottomSheetDialog*.
 
-![MainBabActivity](screenshots/mainbab.png)
+![MainBabActivity](screenshots/MainBab.png)
 
 ---
 
