@@ -8,7 +8,6 @@
     android:padding="24dp"
     android:background="@drawable/bg_nicestart_gradient">
 
-    <!-- Divide la pantalla en 2 columnas -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineVertical"
         android:layout_width="wrap_content"
@@ -16,7 +15,6 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.45" />
 
-    <!-- Logo izquierda -->
     <ImageView
         android:id="@+id/imgLogoLogin"
         android:layout_width="160dp"
@@ -43,7 +41,6 @@
         app:layout_constraintStart_toStartOf="@id/imgLogoLogin"
         app:layout_constraintEnd_toEndOf="@id/imgLogoLogin" />
 
-    <!-- TARJETA BLANCA derecha -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardLoginLand"
         android:layout_width="0dp"

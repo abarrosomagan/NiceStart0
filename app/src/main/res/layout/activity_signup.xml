@@ -47,7 +47,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- NOMBRE -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilName"
                 android:layout_width="match_parent"
@@ -61,7 +60,6 @@
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- EMAIL -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilEmailSignup"
                 android:layout_width="match_parent"
@@ -76,7 +74,6 @@
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- PASSWORD -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilPasswordSignup"
                 android:layout_width="match_parent"
@@ -91,14 +88,12 @@
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- BOTÓN -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnCreateAccount"
                 android:text="@string/activity_signup_btn_create_account"
                 app:backgroundTint="@color/nicestart_primary"
                 style="@style/mybutton" />
 
-            <!-- LINK -->
             <TextView
                 android:id="@+id/tvGoLogin"
                 android:layout_width="match_parent"

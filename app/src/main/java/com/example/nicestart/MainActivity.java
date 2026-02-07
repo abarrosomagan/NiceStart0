@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Cargas el layout
         setContentView(R.layout.activity_main);
 
         MaterialToolbar topAppBar = findViewById(R.id.topAppBar);
@@ -34,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         SwipeRefreshLayout swipeRefresh = findViewById(R.id.swipeRefresh);
         WebView webView = findViewById(R.id.webView);
 
-        // Settings necesarios para webs modernas
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);   // CLAVE
         webView.getSettings().setLoadsImagesAutomatically(true);
@@ -63,10 +61,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Carga web inicial
         webView.loadUrl("https://m3.material.io/");
 
-        // Swipe de refresco
         swipeRefresh.setOnRefreshListener(() -> {
             String currentUrl = webView.getUrl();
             if (currentUrl == null || currentUrl.isEmpty()) {
@@ -77,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Inflar el menú
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);

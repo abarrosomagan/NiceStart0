@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- SETTINGS -->
     <ImageView
         android:id="@+id/icono_fila1"
         android:layout_width="32dp"
@@ -29,7 +28,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/icono_fila1" />
 
-    <!-- ABOUT -->
     <ImageView
         android:id="@+id/icono_fila2"
         android:layout_width="32dp"
@@ -52,7 +50,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/icono_fila2" />
 
-    <!-- LOGOUT -->
     <ImageView
         android:id="@+id/icono_fila3"
         android:layout_width="32dp"
